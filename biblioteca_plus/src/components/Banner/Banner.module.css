@@ -4,6 +4,7 @@
 }
 
 .banner_section {
+    margin-top: 70px;
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -14,7 +15,7 @@
 .banner_div {
     width: 100%;
     height: 560px !important;
-    background-image: linear-gradient(to right, rgba(0, 31, 63, 0.9) 0%, rgba(0, 31, 63, 0.4) 50%, rgba(0, 31, 63, 0) 100%), url(/public/banner.jpg);
+    background-image: linear-gradient(to right, rgba(0, 31, 63, 0.9) 0%, rgba(0, 31, 63, 0.4) 50%, rgba(0, 31, 63, 0) 100%), url(/public/banner.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -23,31 +24,58 @@
 
 .banner_textos {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
-    padding: 0em 1.5em 0em 1.5em;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .banner_textos_div {
-    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-right: 570px;
+    margin-top: 100px;
+    flex-direction: column;
+    font-family: Inter, sans-serif;
 }
 
 .banner_h2{
     font-size: 72px;
-    max-width: 600px;
+    max-width: 690px;
+    font-weight: 700;
+    background: -webkit-linear-gradient(-70deg,#eee 50%, #9ca3af 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 70px;
 }
 
 .banner_p {
+    color: rgba(255, 255, 255, 0.715);
     font-size: 20px;
+    font-weight: 400;
     max-width: 450px;
     font-weight: 300;
+    line-height: 27px;
+    margin-top: 15px;
+}
+
+.banner_botoes {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 16px;
+    margin-top: 15px;
 }
 
 .span {
-    display: inline-block;
+    font-size: 9px;
+    color: rgba(255, 255, 255);
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+
+    background-color: rgba(227, 227, 227, 0.174);
+    padding: 4px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.342);
+    border-radius: 30px;
 }
