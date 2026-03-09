@@ -1,0 +1,63 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 130px;
+    flex-direction: row;
+}
+
+.tituloDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.titulo {
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.icone {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.texto {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    color: #6B7280FF;
+    width: 300px;
+}
+
+.interacoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70px;
+}
+
+.compartilhar {
+    width: 11px;
+    height: 11px;
+    padding: 11px;
+    background-image: url('/compartilhar.png');
+    background-repeat: no-repeat;
+}
+
+.coracao {
+    width: 11px;
+    height: 11px;
+    padding: 11px;
+    background-image: url('/coracao.png');
+    background-repeat: no-repeat;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.linksDiv {
+    display: flex;
+    flex-direction: column;
+}
