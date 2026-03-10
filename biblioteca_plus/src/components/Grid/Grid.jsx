@@ -1,7 +1,8 @@
 import css from "./Grid.module.css";
 import Card from "./Card";
+import Botao from "../Banner/Botao.jsx";
 
-export default function Grid() {
+export default function Grid({titulo, textoBotao, rotaBotao}) {
     return (
         <section>
 
@@ -10,7 +11,7 @@ export default function Grid() {
                     <div className={css.gridSlash}></div>
                     <span className={css.gridSpan}>NOVIDADES</span>
                 </div>
-                <h2 className={css.gridH2}>Destaques da Semana</h2>
+                <h2 className={css.gridH2}>{titulo}</h2>
             </div>
 
             <div className={css.gridDiv}>
@@ -21,14 +22,14 @@ export default function Grid() {
                 <Card genero="CRÔNICAS" titulo="Crônicas da Capital" autor="Fernanda Costa" imagem="https://lh3.googleusercontent.com/aida-public/AB6AXuCCKr_gIoXXy95TZvHUJeV5yR_iaxKnqfvrnMCL13IkIE9jYcb59TxKX69WSPlIiD_Bt_PgP55FqBWijBPwT2Ihcay2S3dG8ahjRClm5bPYOHYvSMlgjo1CJTSsBnMRb_d-ZDCiVMzHon5-ebB3-3OL4prNKMOWYrAXcfbKgggIQVO8fvS2emtJ99rbOal5320paTrt9fCV9P_secqgFk7rW2PMj5M-HBIbm0zJm-JP3l05io5rNJw27c23fpHnrRslyHJ4NVI7230k" />
             </div>
             <div className={css.gridDiv}>
-                <Card genero="AVENTURA" titulo="Além do Horizonte" autor="Juliano Mendes" imagem="https://lh3.googleusercontent.com/aida-public/AB6AXuCSgr_vyBigWMwwVrRouBgS916W22Ws3OqI2rZhMRgoO6PX_iVW2VGAgmrJdorj4ffehQFjklPhZJ_Am7rHl0469VKQiz-HHNvRYxXzpq7vPG-BZGCWapyG2Lk8fkh-VKw-OSbk61Kfb8IJgBhilmM9KlPYlssH4z5oqAs985k4CdaupuonOrBFhzGow36ifDJVsx-vYdyogku1ag9FUwpi6WGyrKJdpgXpnN43ClCKAsSLXdKYT5ojtWLw5gNqi-hAauUdsg0NXKQR" />
+                <Card rota="/livro/alem-do-horizonte-juliano-mendes" genero="AVENTURA" titulo="Além do Horizonte" autor="Juliano Mendes" imagem="https://lh3.googleusercontent.com/aida-public/AB6AXuCSgr_vyBigWMwwVrRouBgS916W22Ws3OqI2rZhMRgoO6PX_iVW2VGAgmrJdorj4ffehQFjklPhZJ_Am7rHl0469VKQiz-HHNvRYxXzpq7vPG-BZGCWapyG2Lk8fkh-VKw-OSbk61Kfb8IJgBhilmM9KlPYlssH4z5oqAs985k4CdaupuonOrBFhzGow36ifDJVsx-vYdyogku1ag9FUwpi6WGyrKJdpgXpnN43ClCKAsSLXdKYT5ojtWLw5gNqi-hAauUdsg0NXKQR" />
                 <Card genero="PSICOLOGIA" titulo="O Despertar da Mente" autor="Dra. Sônia Luz" imagem="https://lh3.googleusercontent.com/aida-public/AB6AXuDIrOniwwx7O8UYZpSiLJUgTJXhZna95wsoFrsm-nZTeLuJkMTHrgkmPvjcq1ZsrD5L_VsN-dig-V9df78pKgQflbtzZAS9x8xTuMWeMOlXQKdRiINMpABc62S6Yfm2Ne72hh4Z3eOoM2NTRKyvoGXXA-Cs2ttpKTnB3HiAk3lET2KeQ0Jry5uwO9LgDRuDWfNDJHdXCKJLru6YRxJIPdp1pLAa1Mw4F2pjW5va6Dby_ukqe6rY3yBOe6ToBV62BSJ72_QKPow_iOqE" />
                 <Card genero="CONTOS" titulo="Fragmentos" autor="Carlos Eduardo" imagem="https://lh3.googleusercontent.com/aida-public/AB6AXuBL-p7VMFKMrJ3m2mgNbTHioDJnF--bq4fgkF2CMeH_ZlX5876uyFH0_SBCKuGWl0zGNM6QqQ6BudDR4njMloF7JX49DmXoonlUO0mMf7rTbxcZSDSLth-GKJw9C5rjkhb1NB4_Go1OJ9-MmEZckBFxD_JAfENWKZhavhiQw-ETy_lsD1lS1ioEwnP8MLTEc4Wb8TuaI4R7IBwkrUi-TPIEqh8oTj5OKvZBDUn9o5-YYUGusr6AgNmG8PrLMa24ACBs4PCWU_4rKTiI" />
                 <Card genero="FICÇÃO" titulo="Luz e Sombra" autor="Patrícia Lima" imagem="https://lh3.googleusercontent.com/aida-public/AB6AXuCbecKio3xro7kgbDmdD5jUiNAkzgWcfTOjbZi7iWXl_fzEavnubnulN_POs4g-6qNfk6wMnQjQ0mO-k_XYG3U_LWGTmPlVzISCU776heCbx9zeFxvcTQqzj1trhylmNN_bzEvYadHW2LlCvxvEDjjQfMAfEjFsiSy7ZXyOGKDP4sI6ejnK7o8LefZzrqkm5xkRfwqmLpiI6UTat6AaESrl9MoJZt2VSlsNYPDHwSxxUJYkZ2d9RzpD3uVgZRfPoF4VZTMc1QbyOvo5" />
                 <Card genero="BOTÂNICA" titulo="O Jardim Suspenso" autor="Mariana Rocha" imagem="https://lh3.googleusercontent.com/aida-public/AB6AXuCM3ZBORHmk162uKNaSa-WFyUxyw28GESaomS1hWZPyM_gAXj6_KJBCVWzm5VeltLEUk2HVBDCLLaR8hiN0s2Yypu2dQrLaEq_onPTi70tfQxrDPlN_HXVz1lufQrZmc75rZdshIccrcBMaUGl24yPQe9uUH1YvAK2I5ZikgqwUeEFOwlCG3h4qpkTOIPZsBqmoUMzpG7VVv4iJqnptVarRuirYRLW8choCFUnyrRu2hZQiQfNloFzxI9d99I5b0pfXwmt6DR88LRP2" />
             </div>
 
-            <button className={css.botao}>VER CATÁLOGO COMPLETO</button>
+            <Botao estilo="botao" texto={textoBotao} rota={rotaBotao}/>
         </section>
     )
 }
