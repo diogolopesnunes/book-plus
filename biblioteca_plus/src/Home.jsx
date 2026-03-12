@@ -8,7 +8,7 @@ export default function Home() {
         <>
             <Header />
             <Banner />
-            <Grid titulo="Destaques da Semana" textoBotao="VER CATÁLOGO COMPLETO" rotaBotao="catalogo"/>
+            <Grid titulo="Destaques da Semana" textoBotao="VER CATÁLOGO COMPLETO" rotaBotao="catalogo" numeroLivros="8" />
             <Footer />
         </>
     )

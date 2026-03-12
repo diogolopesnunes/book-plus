@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    max-width: 220px;
-    max-height: 420px;
+    max-width: 220px !important;
+    max-height: 420px !important;
     margin: 20px;
 }
 

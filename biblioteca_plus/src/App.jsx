@@ -4,10 +4,12 @@ import Login from "./Login.jsx";
 import Cadastro from "./Cadastro.jsx";
 import Catalogo from "./Catalogo.jsx";
 import DetalhesProduto from "./DetalhesProduto.jsx";
+import InicioDaPagina from "./InicioDaPagina.jsx";
 
 export default function App() {
     return (
         <BrowserRouter>
+            <InicioDaPagina />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />

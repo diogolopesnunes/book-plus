@@ -34,4 +34,5 @@
     border: var(--primary-color) solid 1px;
     border-radius: 5px;
     width: 100%;
+    padding: 1px 2px;
 }
