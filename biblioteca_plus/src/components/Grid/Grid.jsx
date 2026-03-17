@@ -1,10 +1,43 @@
 import css from "./Grid.module.css";
-
+import {useEffect, useState} from "react";
 import Card from "./Card";
 import Botao from "../Banner/Botao.jsx";
-import { livros } from "../../dados/livros"; 
 
 export default function Grid({titulo, textoBotao, rotaBotao, numeroLivros}) {
+
+    const [livros, setLivros] = useState([]);
+    const [total, setTotal] = useState(0);
+    const [filtro, setFiltro] = useState("");
+    const [tipoFiltro, setTipoFiltro] = useState("autor");
+    const livrosFiltrados = livros.filter((livro) => {
+        if (tipoFiltro === "autor") {
+            return livro.autor.toLowerCase().includes(filtro.toLowerCase());
+        } else {
+            return livro.titulo.toLowerCase().includes(filtro.toLowerCase());
+        }
+    });
+
+    async function buscarLivro() {
+        let busca = await fetch("https://apps-api-livros.ucxocw.easypanel.host/livro?autor=", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        })
+
+        busca = await busca.json();
+
+        console.log(busca);
+
+        setLivros(busca.livros);
+        setTotal(busca.total);
+
+    }
+
+    useEffect(function() {
+        buscarLivro();
+    }, [])
+
     return (
         <section>
             <div className={css.gridSection}>
@@ -12,11 +45,27 @@ export default function Grid({titulo, textoBotao, rotaBotao, numeroLivros}) {
                     <div className={css.gridSlash}></div>
                     <span className={css.gridSpan}>NOVIDADES</span>
                 </div>
-                <h2 className={css.gridH2}>{titulo}</h2>
+                <div className={css.divTitulo}>
+                    <h2 className={css.gridH2}>{titulo}</h2>
+                    <div className={css.divFiltro}>
+                        <input
+                            className={css.filtro}
+                            type="text"
+                            placeholder="Buscar"
+                            value={filtro}
+                            onChange={(e) => setFiltro(e.target.value)}
+                        />
+                        <select className={css.filtro} value={tipoFiltro} onChange={(e) => setTipoFiltro(e.target.value)}>
+                            <option disabled="true" >Filtrar por:</option>
+                            <option value="autor">Nome do Autor</option>
+                            <option value="titulo">Título do Livro</option>
+                        </select>
+                    </div>
+                </div>
             </div>
 
             <div className={css.gridDiv}>
-                {livros.slice(0, [numeroLivros]).map((livro) => (
+                {livrosFiltrados.slice(0, numeroLivros).map((livro) => (
                     <Card
                         key={livro.id}
                         genero={livro.genero}
