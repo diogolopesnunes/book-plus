@@ -21,6 +21,7 @@ export default function Header({ titulo = "BOOK EXTRA" }) {
                                 <a className="" href="">LANÇAMENTOS</a>
                                 <a className="" href="">MAIS VENDIDOS</a>
                                 <Botao estilo="botaoCheio" cor="primary-color" hover="semHover" texto="LOGIN" fonte="bold" rota="/login"/>
+                                <Botao estilo="botaoCheio" cor="primary-color" hover="semHover" texto="Dashboard" fonte="bold" rota="/dashboard"/>
                             </nav>
                         </div>
                     </div>

@@ -1,29 +1,8 @@
-.login {
+.cadastro {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.alerta {
-    background-color: lightgray;
-    padding: 5px;
-    border-radius: 10px;
-    position: absolute;
-    top: 195px;
-
-    animation: aparecer 0.7s ease;
-}
-
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .formulario {
@@ -31,33 +10,29 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    height: 420px;
+    height: 500px;
     width: 300px;
     padding: 20px;
     margin-top: 20px;
 
+    border: var(--primary-color) solid 1px;
     border-radius: 12px;
 }
 
 .formularioTitulo {
     color: var(--primary-color);
-    font-size: 35px;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 30px;
 }
 
 .label {
     color: var(--primary-color);
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     align-self: flex-start;
 }
 
 .input {
     border: var(--primary-color) solid 1px;
-    width: 300px;
     border-radius: 5px;
-    font-size: 15px;
-    padding: 5px;
+    width: 100%;
+    padding: 1px 2px;
 }

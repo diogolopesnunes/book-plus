@@ -1,12 +1,12 @@
 import Header from "./components/Header/Header.jsx";
-import Grid from "./components/Grid/Grid.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import PaginaCadastrarLivro from "./components/PaginaCadastrarLivro/PaginaCadastrarLivro.jsx";
 
-export default function Catalogo() {
+export default function CadastrarLivro() {
     return (
         <>
             <Header />
-            <Grid titulo="Catálogo" subtitulo="NOVIDADES" textoBotao="VER MAIS" numeroLivros="100"/>
+            <PaginaCadastrarLivro />
             <Footer />
         </>
     )

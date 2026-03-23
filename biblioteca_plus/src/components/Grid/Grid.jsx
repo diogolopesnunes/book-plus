@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import Card from "./Card";
 import Botao from "../Banner/Botao.jsx";
 
-export default function Grid({titulo, textoBotao, rotaBotao, numeroLivros}) {
+export default function Grid({titulo, subtitulo, textoBotao, rotaBotao, numeroLivros}) {
 
     const [livros, setLivros] = useState([]);
     const [total, setTotal] = useState(0);
@@ -43,7 +43,7 @@ export default function Grid({titulo, textoBotao, rotaBotao, numeroLivros}) {
             <div className={css.gridSection}>
                 <div className={css.divNovidades}>
                     <div className={css.gridSlash}></div>
-                    <span className={css.gridSpan}>NOVIDADES</span>
+                    <span className={css.gridSpan}>{subtitulo}</span>
                 </div>
                 <div className={css.divTitulo}>
                     <h2 className={css.gridH2}>{titulo}</h2>
