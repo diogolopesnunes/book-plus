@@ -4,7 +4,7 @@
     align-items: start;
     justify-content: center;
     max-width: 220px !important;
-    max-height: 420px !important;
+    max-height: 450px !important;
     margin: 20px;
 }
 
@@ -77,4 +77,9 @@
     font-family: Inter, sans-serif;
     font-style: italic;
     color: rgb(146, 146, 146);
+}
+
+.adminDiv {
+    display: flex;
+    justify-content: space-around;
 }

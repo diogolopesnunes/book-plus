@@ -1,11 +1,21 @@
 import css from './PaginaCadastro.module.css';
 import {Link} from "react-router-dom";
 import Botao from "../Botao/Botao.jsx";
+import {useState} from "react";
 
 export default function PaginaCadastro() {
+
+    const [alerta, setAlerta] = useState("");
+
+    function placeholderSubmit(e) {
+        e.preventDefault();
+        setAlerta("Não foi possível cadastrar")
+    }
+
     return (
         <div className={css.cadastro}>
-            <form className={css.formulario}>
+            {alerta && <p className={css.alerta} key={alerta}>{alerta}</p>}
+            <form className={css.formulario} onSubmit={placeholderSubmit}>
                 <h2 className={css.formularioTitulo}>Cadastro</h2>
 
                 <div>
@@ -20,16 +30,16 @@ export default function PaginaCadastro() {
 
                 <div>
                     <label className={css.label}>Senha</label>
-                    <input className={css.input} type="new-password" id="senha" />
+                    <input className={css.input} type="password" id="senha" />
                 </div>
 
                 <div>
                     <label className={css.label}>Confirmar Senha</label>
-                    <input className={css.input} type="new-password" id="senha" />
+                    <input className={css.input} type="password" id="senha" />
                 </div>
                 <Link to="/login">Já tenho conta</Link>
 
-                <Botao texto="Cadastrar" cor="primary-color" hover="semHover" estilo="botaoCheio" rota="/login" altura="baixo"/>
+                <Botao tipo="submit" texto="Cadastrar" cor="primary-color" hover="semHover" estilo="botaoCheio" altura="baixo"/>
             </form>
         </div>
     )

@@ -75,7 +75,7 @@ export default function Grid({titulo, subtitulo, textoBotao, rotaBotao, numeroLi
                 {livrosFiltrados.slice(0, numeroLivros).map((livro) => (
                     <Card
                         key={livro.id}
-                        genero={livro.genero}
+                        genero={livro.categoria}
                         titulo={livro.titulo}
                         autor={livro.autor}
                         imagem={livro.imagem}
