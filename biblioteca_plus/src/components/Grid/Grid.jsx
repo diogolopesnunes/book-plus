@@ -1,10 +1,11 @@
 import css from "./Grid.module.css";
 import {useEffect, useState} from "react";
-import Card from "./Card";
-import Botao from "../Banner/Botao.jsx";
+import Card from "../Card/Card.jsx";
+import Botao from "../Botao/Botao.jsx";
 
 export default function Grid({titulo, subtitulo, textoBotao, rotaBotao, numeroLivros}) {
 
+    const logado = localStorage.getItem("token");
     const [livros, setLivros] = useState([]);
     const [total, setTotal] = useState(0);
     const [filtro, setFiltro] = useState("");
@@ -48,6 +49,9 @@ export default function Grid({titulo, subtitulo, textoBotao, rotaBotao, numeroLi
                 <div className={css.divTitulo}>
                     <h2 className={css.gridH2}>{titulo}</h2>
                     <div className={css.divFiltro}>
+                        {logado &&
+                        <Botao estilo="botao" texto={"Cadastra Livro"} rota={"/cadastrar_livro"}/>
+                        }
                         <input
                             className={css.filtro}
                             type="text"

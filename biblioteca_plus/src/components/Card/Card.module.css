@@ -1,0 +1,80 @@
+.cardDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    max-width: 220px !important;
+    max-height: 420px !important;
+    margin: 20px;
+}
+
+.cardDiv:hover .cardImagem {
+    transform: scale(1.15);
+}
+
+.cardDiv:hover .telaEscura {
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.limiteImagem {
+    width: 212px;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+}
+
+.telaEscura {
+    background-color: black;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 0px 0px 12px 12px;
+    transition: opacity 1s ease;
+}
+
+.cardLivro {
+    border-radius: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    max-width: 200px;
+    max-height: 300px;
+    padding: 160px 110px;
+    margin: 16px;
+
+}
+
+.cardImagem {
+    width: 212px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 1s ease;
+}
+
+.generos {
+    font-size: 9px;
+    color: rgb(127, 127, 127);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.titulos {
+    font-size: 18px;
+    font-family: Inter, sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.textos {
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    font-style: italic;
+    color: rgb(146, 146, 146);
+}

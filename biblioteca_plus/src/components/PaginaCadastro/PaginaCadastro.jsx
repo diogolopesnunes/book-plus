@@ -1,6 +1,6 @@
 import css from './PaginaCadastro.module.css';
 import {Link} from "react-router-dom";
-import Botao from "../Banner/Botao.jsx";
+import Botao from "../Botao/Botao.jsx";
 
 export default function PaginaCadastro() {
     return (

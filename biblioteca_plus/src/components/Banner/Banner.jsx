@@ -1,5 +1,5 @@
 import css from "./Banner.module.css";
-import Botao from "./Botao";
+import Botao from "../Botao/Botao.jsx";
 
 export default function Banner() {
     return (

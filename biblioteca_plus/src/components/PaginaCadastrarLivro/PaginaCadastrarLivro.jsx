@@ -1,7 +1,7 @@
 import css from './PaginaCadastrarLivro.module.css';
 import {Link} from "react-router-dom";
 import { useState } from "react";
-import Botao from "../Banner/Botao.jsx";
+import Botao from "../Botao/Botao.jsx";
 
 export default function PaginaCadastrarLivro() {
 

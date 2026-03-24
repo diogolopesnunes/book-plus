@@ -1,5 +1,5 @@
 import { livros } from "../../dados/livros.js"
-import Botao from "../Banner/Botao.jsx";
+import Botao from "../Botao/Botao.jsx";
 import { useParams } from "react-router-dom";
 import css from "./PaginaDetalhesProduto.module.css";
 

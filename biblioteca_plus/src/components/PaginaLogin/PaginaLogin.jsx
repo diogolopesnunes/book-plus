@@ -1,7 +1,7 @@
 import css from './PaginaLogin.module.css';
 import {Link, useNavigate} from "react-router-dom";
 import {useEffect, useState} from 'react'
-import Botao from "../Banner/Botao.jsx";
+import Botao from "../Botao/Botao.jsx";
 
 export default function PaginaLogin() {
     const [email, setEmail] = useState('')
@@ -68,7 +68,7 @@ export default function PaginaLogin() {
 
                 <div>
                     <label className={css.label}>Senha</label>
-                    <input className={css.input} value={senha} type="current-password" id="senha" onChange={(e) => setSenha(e.target.value)}/>
+                    <input className={css.input} value={senha} type="password" id="senha" onChange={(e) => setSenha(e.target.value)}/>
                 </div>
 
                 <Link to="/cadastro">Ainda não tenho conta</Link>

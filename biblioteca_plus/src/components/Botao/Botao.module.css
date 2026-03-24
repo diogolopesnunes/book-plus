@@ -1,0 +1,71 @@
+.semHover {
+    text-decoration: none;
+}
+
+.botaoCheio {
+    color: var(--primary-color);
+    border: none;
+    padding: 16px 32px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 45px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: translate 0.3s ease;
+}
+
+.hover:hover {
+    translate: 0px -6px;
+}
+
+.botaoVazado {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.342);
+    padding: 16px 32px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 45px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.botao {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 16px 32px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 45px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: translate 0.3s ease;
+}
+
+.botaoVazado:hover {
+    background-color: rgba(255, 255, 255, 0.342);
+}
+
+.primary-color {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.branco {
+    background-color: #ffffff;
+    color: var(--primary-color);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.baixo {
+    height: 40px;
+    padding: 8px 24px;
+}

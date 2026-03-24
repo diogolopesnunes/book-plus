@@ -1,8 +1,11 @@
 import css from "./Header.module.css";
 import {Link} from "react-router-dom";
-import Botao from "../Banner/Botao.jsx";
+import Botao from "../Botao/Botao.jsx";
 
 export default function Header({ titulo = "BOOK EXTRA" }) {
+
+    const logado = localStorage.getItem("token");
+
     return (
         <>
             <div className={css.headerEspaco}></div>
@@ -21,7 +24,9 @@ export default function Header({ titulo = "BOOK EXTRA" }) {
                                 <a className="" href="">LANÇAMENTOS</a>
                                 <a className="" href="">MAIS VENDIDOS</a>
                                 <Botao estilo="botaoCheio" cor="primary-color" hover="semHover" texto="LOGIN" fonte="bold" rota="/login"/>
-                                <Botao estilo="botaoCheio" cor="primary-color" hover="semHover" texto="Dashboard" fonte="bold" rota="/dashboard"/>
+                                {logado && (
+                                    <Botao estilo="botaoCheio" cor="primary-color" hover="semHover" texto="Dashboard" fonte="bold" rota="/dashboard"/>
+                                )}
                             </nav>
                         </div>
                     </div>
