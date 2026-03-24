@@ -6,7 +6,7 @@ export default function Catalogo() {
     return (
         <>
             <Header />
-            <Grid titulo="Catálogo" subtitulo="NOVIDADES" textoBotao="VER MAIS" numeroLivros="100"/>
+            <Grid titulo="Catálogo" subtitulo="NOVIDADES" textoBotao="VER MAIS" numeroLivros="90"/>
             <Footer />
         </>
     )

@@ -8,18 +8,25 @@ export default function PaginaCadastro() {
             <form className={css.formulario}>
                 <h2 className={css.formularioTitulo}>Cadastro</h2>
 
-                <label className={css.label}>Nome</label>
-                <input className={css.input} type="text" id="nome" />
+                <div>
+                    <label className={css.label}>Nome</label>
+                    <input className={css.input} type="text" id="nome" />
+                </div>
 
-                <label className={css.label}>Email</label>
-                <input className={css.input} type="email" id="email" />
+                <div>
+                    <label className={css.label}>Email</label>
+                    <input className={css.input} type="email" id="email" />
+                </div>
 
-                <label className={css.label}>Senha</label>
-                <input className={css.input} type="new-password" id="senha" />
+                <div>
+                    <label className={css.label}>Senha</label>
+                    <input className={css.input} type="new-password" id="senha" />
+                </div>
 
-                <label className={css.label}>Confirmar Senha</label>
-                <input className={css.input} type="new-password" id="senha" />
-
+                <div>
+                    <label className={css.label}>Confirmar Senha</label>
+                    <input className={css.input} type="new-password" id="senha" />
+                </div>
                 <Link to="/login">Já tenho conta</Link>
 
                 <Botao texto="Cadastrar" cor="primary-color" hover="semHover" estilo="botaoCheio" rota="/login" altura="baixo"/>

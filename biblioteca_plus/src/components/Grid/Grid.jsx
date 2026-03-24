@@ -1,9 +1,12 @@
 import css from "./Grid.module.css";
 import {useEffect, useState} from "react";
+import {useLocation} from "react-router-dom";
 import Card from "../Card/Card.jsx";
 import Botao from "../Botao/Botao.jsx";
 
 export default function Grid({titulo, subtitulo, textoBotao, rotaBotao, numeroLivros}) {
+
+    const location = useLocation();
 
     const logado = localStorage.getItem("token");
     const [livros, setLivros] = useState([]);
@@ -49,9 +52,9 @@ export default function Grid({titulo, subtitulo, textoBotao, rotaBotao, numeroLi
                 <div className={css.divTitulo}>
                     <h2 className={css.gridH2}>{titulo}</h2>
                     <div className={css.divFiltro}>
-                        {logado &&
+                        {logado && location.pathname === "/dashboard" && (
                         <Botao estilo="botao" texto={"Cadastra Livro"} rota={"/cadastrar_livro"}/>
-                        }
+                            )}
                         <input
                             className={css.filtro}
                             type="text"
@@ -68,7 +71,7 @@ export default function Grid({titulo, subtitulo, textoBotao, rotaBotao, numeroLi
                 </div>
             </div>
 
-            <div className={css.gridDiv}>
+            <div className={css.gridDiv + " " + css.gridLivros}>
                 {livrosFiltrados.slice(0, numeroLivros).map((livro) => (
                     <Card
                         key={livro.id}
